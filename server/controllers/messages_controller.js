@@ -28,7 +28,7 @@ module.exports = {
     delete: (req, res) => {
         const idToDelete = req.params.id;
         const indexToDelete = messages.findIndex(message => message.id == idToDelete);
-        messages.splice(messageIndex, 1);
+        messages.splice(indexToDelete, 1);
         res.status(200).send(messages);
     }
 }
